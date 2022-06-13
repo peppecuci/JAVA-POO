@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="flex-container">
+        <h1>Formulaire de contact</h1>
+        <form>
+            <fieldset>
+                <legend>Coordonnées</legend>
+                <div>
+                    <input name="nom" type="text" placeholder="Nom">
+                    <input name="prenom" type="text" placeholder="Prenom">
+                </div>
+                <div>
+                    <label>Sexe: </label>
+                    <input type="radio" name="sexe" id="rb_homme">
+                    <label for="rb_homme">Homme</label>
+                    <input type="radio" name="sexe" id="rb_femme">
+                    <label for="rb_femme">Femme</label>
+                    <input type="radio" name="sexe" id="rb_autre">
+                    <label for="rb_autre">Autre</label>
+                </div>
+                <div>
+                    <input type="email" name="e-mail" placeholder="E-mail">
+                </div>
+                <div>
+                    <input type="text" name="num_mobile" id="" placeholder="N° mobile">
+                    <input type="number" name="num_fixe" id="" placeholder="N° fixe">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Vos besoins</legend>
+                <select name="choix" id="">
+                    <option value="HTML-CSS">HTML-CSS</option>
+                    <option value="JAVA">JAVA</option>
+                    <option value="JavScript">JavaScript</option>
+                    <option value="C#">C#</option>
+                </select>
+                <textarea name="description" id="" rows="10" cols="30" placeholder="Description"></textarea>
+            </fieldset>
+            <div>
+                <button type="button">Envoyer</button>
+                <button type="reset">Reset</button>
+            </div>
+            <div>
+                <button type="button">Retour au CV</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

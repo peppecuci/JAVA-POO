@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    height: 100vh;
+    padding: 2%;
+    background-image: url(bla.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    height: 100vh;
+}
+
+.logo{
+    width: 10%;
+}
+
+a{
+    color: white;
+}
+
+.explicatif-about-us{
+    padding: 1%;
+    color: white;
+    height: 100vh;
+}
+
+.explicatif-cours{
+    padding: 1%;
+    color: white;
+    height: 100vh;
+}
+
+.explicatif-inscription{
+    padding: 1%;
+    color: white;
+    height: 100vh;
+}
+
+.explicatif-media{
+    padding: 1%;
+    color: white;
+    height: 100vh;
+}
+
+.explicatif-contactez-nous{
+    padding: 1%;
+    color: white;
+    height: 100vh;
+}
+
+.flex-titre-soustitre{
+    display: flex;
+    margin: 1%;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+}
+
+.flex-logo-titre{
+    display: flex;
+    justify-content: center;
+}
+
+.flex-menu nav{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.flex-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}

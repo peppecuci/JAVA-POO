@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url("background.jpg");
+    background-size: cover;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+h1{
+    margin-bottom: 1%;
+    font-weight: bold;
+    color: rgb(179, 142, 21);
+    text-shadow: 1px 1px 2px gold;
+}
+
+div p{
+  font-weight: bold;
+  font-size: large;  
+}
+
+p{
+    margin-bottom: 1%
+}
+
+h2{
+   
+    text-align: center;
+    border-bottom: 2px solid black;
+    border-color: rgb(252, 207, 124);
+    background-color: rgb(252, 252, 166);
+}
+
+dt {
+    margin-bottom: 0.2%;
+    margin-left: 1%;
+    color: orange;
+    font-style: italic;
+    font-size: 120%;
+}
+
+dd{
+    margin-left: 7%;
+    margin-bottom: 1.5%;
+
+}
+
+ul{
+    margin-left: 5%;
+    list-style-type: circle;
+}
+
+img{
+    width: 90%;
+}
+
+section{
+    margin-bottom: 1%;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    background-color: white;
+    height: 100vh;
+}
+
+.flex-box1{
+    display: flex;
+    justify-content: space-around;
+}
+
+.flex-box2{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.flex-box3{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-box4{
+    display: flex;
+    margin-top: 2%;
+    width: 100%;
+    border: 2px solid orange;
+}
+
+.experiences{
+    width: 50vh;
+    border: 2px solid orange;
+}
+
+.competences{
+    width: 50vh;
+    margin-top: 20%;
+    border: 2px solid orange;
+}
+
+.lorem{
+    padding: 0.5%;
+}
+
+#title{
+    margin-bottom: 10%;
+    font-size: 300%;
+}
+
+.canard{
+    font-size: 150%;
+    margin-bottom: 5%;
+}
+
+
+@media screen and (max-width: 768px) {
+    body{
+        background-image: none;
+        padding: 0%;
+    }
+
+    .flex-box1{
+        flex-direction: column;
+    }
+
+    .flex-box2{
+        text-align: center;
+        align-items: center;
+    }
+
+    img{
+        width: 50%;
+        justify-self: center;
+    }
+
+    #title{
+        margin: 0%;
+        font-size: 250%;
+    }
+
+    .canard{
+        margin-bottom: 0%;
+        font-size: 120%;
+    }
+
+    .experiences{
+        margin-top: 2%;
+        width: 100%;
+    }
+
+    .competences{
+        margin-top: 2%;
+        width: 100%;
+    }
+
+    .lorem{
+        width: 100%;
+    }
+
+    ul{
+        margin-left: 8%;
+    }
+
+    h2{
+        width: 100%;
+    }
+}
