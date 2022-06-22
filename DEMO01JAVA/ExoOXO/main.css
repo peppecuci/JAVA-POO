@@ -1,6 +1,11 @@
 td {
     border: 1px solid black;
     height: 100px;
+    background-color: black;
+    color: white;
+    text-decoration: underline;
+    text-align: center;
+    
 }
 
 table {

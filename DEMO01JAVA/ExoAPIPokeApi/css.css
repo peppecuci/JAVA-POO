@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../pokemonBattleField.png");
+    /*background-image: url("https://i.redd.it/o8a7u5vl6hb41.png");*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+img {
+    width: 20%;
+}
+
+.flex-up {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-pokemon1Name {
+    padding-left: 25%;
+    padding-right: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.flex-imageAndVs {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.flex-imageAndVs {
+    display: flex;
+    margin-top: 15%;
+    justify-content: center;
+    align-items: center;
+}
+
+.vs-container {
+    display: flex;
+    margin-top: 2.7%;
+    justify-content: center;
+    width: 25%;
+}
+
+#ready {
+    text-align: center;
+}
+
+@keyframes tremblement {
+    from {transform: rotate(-20deg)}
+    50% {transform: rotate(20deg)}
+    to {transform: rotate(-20deg)}
+}
+
+#img1 {
+    animation-name: tremblement;
+    animation-iteration-count: 2;
+    animation-duration: 0.5s;
+}
+
+#img2 {
+    animation-name: tremblement;
+    animation-iteration-count: 2;
+    animation-duration: 0.5s;
+}
+
+/*#img2 {
+    animation-name: tremblement;
+    animation-iteration-count: 5s;
+    animation-duration: 1s;
+}*/
+
+#battle {
+    text-align: center;
+}
+
