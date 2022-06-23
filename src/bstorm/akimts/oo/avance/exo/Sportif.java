@@ -8,6 +8,8 @@ abstract class Sportif {
     private String prenom;
     private LocalDate dateNaiss;
 
+    private int totalGain;
+
     //region const-get-set
     public Sportif(String nom, String prenom, LocalDate dateNaiss) {
         this.nom = nom;
@@ -37,8 +39,21 @@ abstract class Sportif {
     public void setDateNaiss(LocalDate dateNaiss) {
         this.dateNaiss = dateNaiss;
     }
+
+    public int getTotalGain() {
+        return totalGain;
+    }
+
+    public void setTotalGain(int totalGain) {
+        this.totalGain = totalGain;
+    }
+
     //endregion
 
     public abstract double performer();
 
+    @Override
+    public String toString() {
+        return nom + " " + prenom;
+    }
 }
