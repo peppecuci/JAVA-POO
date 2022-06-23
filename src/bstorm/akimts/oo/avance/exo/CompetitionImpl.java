@@ -2,25 +2,25 @@ package bstorm.akimts.oo.avance.exo;
 
 import bstorm.akimts.oo.avance.exo.exceptions.EtatCompetitionException;
 import bstorm.akimts.oo.avance.exo.exceptions.LimiteAtteinteException;
+import bstorm.akimts.oo.avance.exo.exceptions.NiveauCompetition;
 
 import java.util.*;
 
 public class CompetitionImpl<TypeCompet extends Sportif> implements Competition<TypeCompet> {
 
+    private NiveauCompetition niveauCompet;
     private final int limiteParticipant;
     private final Map<TypeCompet, Integer> participants = new HashMap<>();
     private List<Sportif> classements;
 
-    public CompetitionImpl() {
-        limiteParticipant = 0;
-    }
 
-
-    public CompetitionImpl(int limiteParticipant) {
+    public CompetitionImpl(NiveauCompetition niveauCompet, int limiteParticipant) {
         if(limiteParticipant < 0)
             throw new IllegalArgumentException("la limite de participant invalide (devrait être positive");
         this.limiteParticipant = limiteParticipant;
+        this.niveauCompet = niveauCompet;
     }
+
 
     @Override
     public void lancer() {
@@ -38,6 +38,15 @@ public class CompetitionImpl<TypeCompet extends Sportif> implements Competition<
         }
 
         classements = genererClassement();
+        Set <TypeCompet> setGagnants = getGagnants();
+        System.out.println("Le gagnant est: " + setGagnants);
+        for (Sportif sportif : setGagnants) {
+            sportif.setTotalGain(this.niveauCompet.getPrime() / setGagnants.size());
+            System.out.println("Prime gagné: " + sportif.getTotalGain());
+        }
+
+
+
     }
 
     @Override
@@ -56,6 +65,7 @@ public class CompetitionImpl<TypeCompet extends Sportif> implements Competition<
             throw new IllegalArgumentException("sportif déjà inscrit");
 
         participants.put(sportif, null);
+        System.out.println("-" + sportif.getNom() + " " + sportif.getPrenom());
     }
 
     @Override
@@ -122,7 +132,7 @@ public class CompetitionImpl<TypeCompet extends Sportif> implements Competition<
         for (Sportif sportif : participants.keySet()) {
 
             boolean place = false;
-            for (int i = 0; i < classement.size(); i++) {
+            for (int i = 0; i < classement.size() && !place; i++) {
 
                 Sportif currentSportif = classement.get(i);
                 int currentPerf = participants.get(currentSportif);

@@ -29,6 +29,7 @@ public class Judoka extends Sportif {
     @Override
     public double performer() {
         Random random = new Random();
+        //int performance = 10; TEST POUR VOIR SI LA PRIME EST PARTAGé EN PLUSIEUR GAGNANTS
         int performance = this.puissanceProjection + (random.nextInt(-20, 21));
         return performance;
     }
